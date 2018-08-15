@@ -1,0 +1,57 @@
+
+page{
+  margin: 0;
+  padding:0;
+  overflow: hidden;
+  width:100%;
+  height:100%;
+  position: relative;
+  overflow-x: hidden; 
+ 
+}
+.container{
+  margin: 0;
+  padding:0;
+  position: relative;
+}
+
+.first{
+ width:100%;
+ height:auto;
+}
+
+.index{
+  width:750rpx;
+}
+
+.name{
+ width:440rpx;
+ height:60rpx;
+ position: absolute;
+ left:20%;
+ top:30%; 
+ border:1px solid #ffffff;
+ border-radius: 10rpx;
+ color: #fff;
+}
+
+
+.mobile{
+ width:440rpx;
+ height:60rpx;
+ position: absolute;
+ left:20%;
+ top:48%;
+ border:1px solid #ffffff;
+ border-radius: 10rpx;
+ color: #fff;
+}
+
+.btn{
+  width:440rpx;
+  height: 80rpx;
+  color:#fff;
+  position: absolute;
+  left:20%;
+  top:64%; 
+}

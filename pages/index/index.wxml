@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container" >
+   <view class="first" >
+     <image class="index" src="{{filePaths}}" mode='scaleToFill'  bindtap='go'></image>
+   </view> 
+</view>

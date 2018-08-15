@@ -1,0 +1,125 @@
+
+ <!-- <scroll-view scroll-y="true" style="width:100%;height:{{scrollHeight}}rpx;white-space:nowrap;">   -->
+   <view class='container'>
+   <view class="picture" bindtap="chooseimage">
+         <image class="pc"  src="{{tempFilePaths}}"  ></image>
+   </view>
+
+   <view class="txt">
+    <text>{{title}}</text>
+   </view>
+      <!-- 会议地址，时间 -->
+   <view class="message" >
+      <view class="first"   catchtap="openLocation" >
+         <view class="ic" >
+          <icon class="iconfont icon-dibiao" ></icon>
+         </view>
+         <text>{{address}}</text>
+      </view>
+      
+      <view class="second">
+         <view class="clock">
+          <icon type='waiting' size='26' ></icon>
+         </view>
+         <text>{{time}}</text>
+      </view>
+   </view>
+     <!-- 会议内容 -->
+   <view class="content">
+      <view class="title">
+          <text>{{header}}</text>
+      </view>
+      <view>    
+          <view class="info"  wx:for='{{contents}}' wx:key='id'>
+               <text>{{item.txt}}</text>
+          </view>               
+      </view>
+   </view>
+    <!-- 会议嘉宾 -->
+  <view class="guest">
+      <view class="header">
+          <text>{{guest}}</text>
+      </view>
+      <view class="big-logo">       
+            <block wx:for-items="{{logos}}" wx:key='id'>        
+                <view class="logoinfo"  bindtap='start'>
+                    <image style="width:100rpx; height: 100rpx;" src="{{item.image}}" mode="aspectFit" />
+                    <text class="logotext">{{item.name}}</text>
+                     <text class="logotext">{{item.company}}</text>
+                     <text class="logotext">{{item.jobs}}</text>
+                </view>               
+            </block>
+        </view>
+  </view>
+  <!-- 会议议程 -->
+ 
+ <view class="schedule">
+      <view class="top">
+          <text>{{top}}</text>
+      </view>
+   <view class="table">
+        <view class="tr bg-w">
+          <view class="th">会议时间</view>
+          <view class="th">会议主题</view>    
+        </view>
+
+    <block wx:for="{{listData}}" wx:key="{{code}}">  
+      <view class="tr bg-w" wx:if="{{listData[index].ishaveChild}}">
+        <view class="th1">{{item.time}}</view>   
+      </view>
+      <block wx:for="{{listData[index].children}}" wx:key="{{code}}">
+         <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+           <view class="td">{{item.date}}</view>
+           <view class="td">{{item.content}}</view>       
+         </view>
+         <view class="tr" wx:else>
+            <view class="td">{{item.date}}</view>
+            <view class="td">{{item.content}}</view>
+         </view>
+      </block>
+    </block> 
+  </view>
+   
+   <!-- 组织单位 -->
+  <view class="partner" >
+    <block wx:if="{{you}}">
+     <view class="zhidao"  >
+         <text>{{zhidao}}</text>
+     </view>
+    <block wx:for="{{zhidaoData}}" wx:key="{{code}}">
+     <view class="infor">
+        <text>{{item.infor}}</text>
+     </view>
+     <view class="msg">
+        <block wx:for-items="{{zhidaoData[index].companys}}" wx:key='id'>        
+                <view class="unit">
+                    <text>{{item.name}}</text>
+                </view>               
+        </block>
+     </view>
+    </block>
+   </block>
+  </view>
+  <view class="bm">
+      <button  class="btn" type="primary" bindtap='reg'  disabled='{{disabled}}'>{{btnText}}</button>  
+  </view>
+ </view>
+</view>
+
+<!-- </scroll-view>  -->
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+

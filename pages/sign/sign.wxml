@@ -1,0 +1,13 @@
+<view class="container">
+      <image class="bg" src="{{filePaths}}" mode='widthFix' ></image>
+
+   <view  class="header">
+      <image class="sign" src="../../image/success.png" mode='widthFix' ></image>   
+   </view>
+   <button class="btn"  type='primary' bindtap='jump'>确     定</button>
+</view>
+
+
+
+
+

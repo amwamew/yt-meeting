@@ -1,0 +1,21 @@
+<view class="container">
+  <view class='header'> 
+     <view>
+         <image class="logo" src="{{filePaths}}" mode='widthFix' ></image>
+     </view>
+     <view class="txt">
+        <text class="row1">该程序由医统天下（北京）科技有限公司开发，向其提供以下权限即可继续操作</text>
+     </view>
+  </view>
+
+  <view class="select">
+        <checkbox-group bindchange="checkboxChange">
+           <label class="checkbox" wx:for="{{items}}" wx:key="code">
+               <checkbox class="point" value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+           </label>
+        </checkbox-group>
+  </view>
+ 
+  <button type="primary" open-type="getUserInfo"  class="login" bindgetuserinfo="bindGetUserInfo">确认登录</button>
+ 
+</view> 

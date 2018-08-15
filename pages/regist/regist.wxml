@@ -1,0 +1,15 @@
+<view class="container">
+   <view class="first">
+     <image class="index" src="{{filePaths}}" mode='widthFix' ></image>
+   </view>
+
+  <view class="login">
+        <input class="name" name="name" maxlength='12' placeholder='姓名' bindinput ="userNameInput"/>   
+  </view>
+  <view class="num">
+        <input class="mobile" type="text" maxlength='11' name="tel" placeholder='手机号码' bindinput="mobileInput"/>   
+  </view>
+  <view class="bm">
+      <button  class="btn" type="primary" bindtap="loginBtnClick" >报名</button>  
+   </view>
+</view> 
